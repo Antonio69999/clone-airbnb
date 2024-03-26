@@ -25,7 +25,7 @@ export function MapFilterItems() {
   console.log(search);
 
   return (
-    <div className="flex gap-x-10 mt-5 w-full overflow-x-scroll no-scrollbar">
+    <div className="flex lg:justify-center gap-x-10 mt-5 w-full overflow-x-scroll no-scrollbar">
       {categoryItems.map((item) => (
         <Link
           key={item.id}
