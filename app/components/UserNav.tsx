@@ -23,7 +23,10 @@ export default async function UserNav() {
           <MenuIcon className="w-6 h-6 lg:w-5 lg:h-5" />
 
           <img
-            src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+            src={
+              user?.picture ??
+              "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+            }
             alt="Image of the user"
             className="rounded-full h-8 w-8 hidden lg:block"
           />
