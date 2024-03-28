@@ -33,7 +33,8 @@ model Home {
   bedrooms String?
   bathrooms String?
   country String?
-  photo Int?
+  photo String?
+  price Int?
   categoryName String?
 
   addedCategory     Boolean   @default(false)
