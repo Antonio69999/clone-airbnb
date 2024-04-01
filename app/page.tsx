@@ -2,9 +2,9 @@ import { MapFilterItems } from "./components/MapFilterItems";
 import prisma from "./lib/db";
 import { ListingCard } from "./components/ListingCard";
 import { Suspense } from "react";
-import { SkeletonCard } from "./components/SkeletonCard";
 import { NoItem } from "./components/NoItem";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { SkeltonCard } from "./components/SkeletonCard";
 
 async function getData({
   searchParams,
@@ -71,7 +71,10 @@ async function ShowItems({
   return (
     <>
       {data.length === 0 ? (
-        <NoItem />
+        <NoItem
+          title="Sorry no listing for this category !"
+          description="Please check an other category or create your own listing !"
+        />
       ) : (
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {data.map((item) => (
@@ -97,12 +100,12 @@ async function ShowItems({
 function SkeletonLoading() {
   return (
     <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-      <SkeletonCard></SkeletonCard>
-      <SkeletonCard></SkeletonCard>
-      <SkeletonCard></SkeletonCard>
-      <SkeletonCard></SkeletonCard>
-      <SkeletonCard></SkeletonCard>
-      <SkeletonCard></SkeletonCard>
+      <SkeltonCard></SkeltonCard>
+      <SkeltonCard></SkeltonCard>
+      <SkeltonCard></SkeltonCard>
+      <SkeltonCard></SkeltonCard>
+      <SkeltonCard></SkeltonCard>
+      <SkeltonCard></SkeltonCard>
     </div>
   );
 }
