@@ -54,14 +54,14 @@ export function ListingCard({
               <form action={addToFavourite}>
                 <input type="hidden" name="homeId" value={homeId} />
                 <input type="hidden" name="userId" value={userId} />
-                <input type="hidden" name="pathName" value={pathName}/>
+                <input type="hidden" name="pathName" value={pathName} />
                 <AddToFavouriteButton />
               </form>
             )}
           </div>
         )}
       </div>
-      <Link href={"/"} className="mt-2">
+      <Link href={`/home/${homeId}`} className="mt-2">
         <h3 className=" font-medium text-base">
           {country?.flag} {country?.label} ({country?.region})
         </h3>
