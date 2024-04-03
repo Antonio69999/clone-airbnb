@@ -3,7 +3,6 @@ import prisma from "@/app/lib/db";
 import { NextResponse } from "next/server";
 import { unstable_noStore as noStore } from "next/cache";
 
-
 export async function GET() {
   noStore();
   const { getUser } = getKindeServerSession();
@@ -33,5 +32,5 @@ export async function GET() {
     });
   }
 
-  return NextResponse.redirect("http://localhost:3000");
+  return NextResponse.redirect("http://https://clone-airbnb-zeta.vercel.app");
 }
